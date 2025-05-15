@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos - AirFireIngenieros</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +51 970 874 965</span>
+          <span><i class="fas fa-envelope"></i> contacto@airfireingenieros.com</span>
+        </div>
+        <div class="social-links">
+          <span>Síguenos:</span>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <span>AIRFIRE</span>INGENIEROS
+          </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html" class="active">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Nuestros Proyectos</h1>
+        <p>Conoce algunos de nuestros casos de éxito</p>
+      </div>
+    </section>
+
+    <section class="portfolio">
+      <div class="container">
+        <div class="portfolio-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="comercial">Comercial</button>
+          <button class="filter-btn" data-filter="industrial">Industrial</button>
+          <button class="filter-btn" data-filter="residencial">Residencial</button>
+        </div>
+
+        <div class="portfolio-grid">
+          <div class="portfolio-item comercial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1556139930-c23bda387d2b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Centro Comercial MegaPlaza">
+              <div class="portfolio-overlay">
+                <h3>Centro Comercial MegaPlaza</h3>
+                <p>Implementación de sistemas contra incendios en más de 100,000 m² de área comercial.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Centro Comercial MegaPlaza</h3>
+              <p>Sistema integral de protección contra incendios</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item industrial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1581094487160-25aaabb8956a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Planta Industrial Textil">
+              <div class="portfolio-overlay">
+                <h3>Planta Industrial Textil</h3>
+                <p>Diseño y montaje de sistema de rociadores automáticos y detección temprana.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Planta Industrial Textil</h3>
+              <p>Sistema de rociadores y detección temprana</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item residencial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Condominio Las Palmas">
+              <div class="portfolio-overlay">
+                <h3>Condominio Las Palmas</h3>
+                <p>Instalación de sistemas de detección y alarma en complejo residencial de lujo.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Condominio Las Palmas</h3>
+              <p>Sistema de detección y alarma</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item comercial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Hotel Gran Pacífico">
+              <div class="portfolio-overlay">
+                <h3>Hotel Gran Pacífico</h3>
+                <p>Sistema completo de protección contra incendios para hotel de 5 estrellas.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Hotel Gran Pacífico</h3>
+              <p>Sistema integral de protección</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item industrial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1573069713966-0d90f93d2cdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Centro de Datos TechCore">
+              <div class="portfolio-overlay">
+                <h3>Centro de Datos TechCore</h3>
+                <p>Implementación de sistemas de agentes limpios para protección de equipos sensibles.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Centro de Datos TechCore</h3>
+              <p>Sistema de agentes limpios</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item residencial">
+            <div class="portfolio-image">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Residencia Privada">
+              <div class="portfolio-overlay">
+                <h3>Residencia Privada</h3>
+                <p>Sistema de detección y alarma personalizado para residencia de lujo.</p>
+                <a href="#" class="btn btn-small">Ver detalles</a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <h3>Residencia Privada</h3>
+              <p>Sistema personalizado de protección</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial-slide active">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>AirFireIngenieros implementó el sistema contra incendios de nuestro centro comercial de manera profesional y eficiente. Su equipo demostró gran conocimiento y compromiso en todas las etapas del proyecto.</p>
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <div class="testimonial-author">
+                <h4>Roberto Gómez</h4>
+                <p>Gerente General - Centro Comercial MegaPlaza</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>El servicio de mantenimiento que nos brinda AirFireIngenieros ha sido excepcional. Su respuesta rápida ante cualquier eventualidad nos da tranquilidad y confianza.</p>
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <div class="testimonial-author">
+                <h4>María López</h4>
+                <p>Directora de Operaciones - Hotel Gran Pacífico</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="testimonial-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>La solución de agentes limpios que implementaron en nuestro centro de datos fue exactamente lo que necesitábamos. Profesionales de primera línea con conocimiento técnico superior.</p>
+                <i class="fas fa-quote-right"></i>
+              </div>
+              <div class="testimonial-author">
+                <h4>Daniel Torres</h4>
+                <p>CTO - TechCore Data Centers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-btn prev" id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="testimonial-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+          <button class="testimonial-btn next" id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Tiene un proyecto en mente?</h2>
+          <p>Contáctenos hoy para discutir cómo podemos ayudarle con sus necesidades de protección contra incendios.</p>
+          <a href="contacto.html" class="btn btn-secondary">Solicitar cotización</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html">
+            <span>AIRFIRE</span>INGENIEROS
+          </a>
+          <p>Soluciones integrales en sistemas contra incendios</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Av. La Marina 123, Lima, Perú</p>
+          <p><i class="fas fa-phone"></i> +51 970 874 965</p>
+          <p><i class="fas fa-envelope"></i> contacto@airfireingenieros.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 AirFireIngenieros. Todos los derechos reservados.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51970874965" class="whatsapp-button" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

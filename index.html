@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirFireIngenieros - Sistemas contra Incendios</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-phone"></i> +51 970 874 965</span>
+          <span><i class="fas fa-envelope"></i> contacto@airfireingenieros.com</span>
+        </div>
+        <div class="social-links">
+          <span>Síguenos:</span>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <span>AIRFIRE</span>INGENIEROS
+          </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-slider">
+      <div class="slider-container">
+        <div class="slide active">
+          <div class="slide-content">
+            <h1>Tecnología e Innovación a su Servicio</h1>
+            <p>Utilizamos las tecnologías más avanzadas para garantizar la máxima seguridad y eficiencia en nuestros sistemas.</p>
+            <a href="contacto.html" class="btn btn-primary">Contáctenos</a>
+          </div>
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');"></div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h1>Protección contra Incendios de Alta Calidad</h1>
+            <p>Diseño, instalación y mantenimiento de sistemas contra incendios para empresas y hogares.</p>
+            <a href="servicios.html" class="btn btn-primary">Nuestros Servicios</a>
+          </div>
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+        </div>
+        <div class="slide">
+          <div class="slide-content">
+            <h1>Experiencia y Profesionalismo</h1>
+            <p>Más de 15 años protegiendo lo que más importa con soluciones adaptadas a sus necesidades.</p>
+            <a href="proyectos.html" class="btn btn-primary">Ver Proyectos</a>
+          </div>
+          <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1503387837-b154d5074bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2531&q=80');"></div>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-arrow prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </div>
+        <button class="slider-arrow next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Nuestras Soluciones</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-fire-extinguisher"></i>
+            </div>
+            <h3>Sistemas de Extinción</h3>
+            <p>Instalamos y mantenemos sistemas de extinción automática adaptados a sus necesidades.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Detección de Incendios</h3>
+            <p>Tecnología de última generación para detectar incendios en etapas tempranas.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-cog"></i>
+            </div>
+            <h3>Mantenimiento</h3>
+            <p>Servicio técnico especializado para garantizar el funcionamiento de sus sistemas.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>Consultoría</h3>
+            <p>Asesoramiento especializado en normativa y cumplimiento de estándares de seguridad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>¿Necesita una solución personalizada?</h2>
+          <p>Contáctenos hoy para una evaluación gratuita de sus necesidades de protección contra incendios.</p>
+          <a href="contacto.html" class="btn btn-secondary">Solicitar cotización</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="index.html">
+            <span>AIRFIRE</span>INGENIEROS
+          </a>
+          <p>Soluciones integrales en sistemas contra incendios</p>
+        </div>
+        <div class="footer-links">
+          <h4>Enlaces rápidos</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contacto</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Av. La Marina 123, Lima, Perú</p>
+          <p><i class="fas fa-phone"></i> +51 970 874 965</p>
+          <p><i class="fas fa-envelope"></i> contacto@airfireingenieros.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 AirFireIngenieros. Todos los derechos reservados.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51970874965" class="whatsapp-button" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
