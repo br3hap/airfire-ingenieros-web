@@ -5,7 +5,7 @@
   --primary-dark: #c62828;
   --secondary: #1a1f2c;
   --text: #333333;
-  --text-light: #777777;
+  --text-light: #eee7e7;
   --bg-light: #ffffff;
   --bg-dark: #1a1f2c;
   --bg-alt: #f5f5f5;
@@ -624,6 +624,7 @@ footer {
   font-weight: 700;
   margin-bottom: 1.5rem;
   display: inline-block;
+  color: var(--text-light);
 }
 
 .footer-logo p {
