@@ -1,7 +1,7 @@
 
 /* General Styles */
 :root {
-  --primary: #312a2a;
+  --primary: #000000;
   --primary-dark: #c62828;
   --secondary: #1a1f2c;
   --text: #333333;
@@ -1761,5 +1761,31 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
+  }
+
+  .hero-slider {
+    height: auto;
+  }
+
+  .slider-container {
+    height: auto;
+  }
+
+  .slide {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    display: none; /* ocultamos todas por defecto */
+    flex-direction: column;
+  }
+
+  .slide.active {
+    display: flex; /* solo se muestra la activa */
+  }
+
+  .slide-content {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
   }
 }
