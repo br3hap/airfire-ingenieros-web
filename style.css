@@ -90,10 +90,15 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--secondary);
   transition: var(--transition);
 }
+.dark-theme h2{
+  color: #ffffff;
+}
+
+.dark-theme h3 {
+  color: #ffffff;
+}
 
 .dark-theme h1,
-.dark-theme h2,
-.dark-theme h3,
 .dark-theme h4,
 .dark-theme h5,
 .dark-theme h6 {
@@ -1064,7 +1069,7 @@ footer {
 }
 
 .portfolio-info p {
-  color: var(--text-light);
+  /* color: var(--text-light); */
   margin-bottom: 0;
 }
 
@@ -1238,7 +1243,7 @@ footer {
 }
 
 .blog-date {
-  color: var(--text-light);
+  /* color: var(--text-light); */
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
 }
