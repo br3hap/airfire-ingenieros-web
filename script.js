@@ -1,40 +1,66 @@
 
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', () => {
+  console.log('DOM loaded - initializing scripts');
+
   const themeToggle = document.getElementById('theme-toggle');
   const body = document.body;
 
-  // Check if user has previously set a theme preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    body.classList.toggle('dark-theme', savedTheme === 'dark');
-  }
+  // Check if theme toggle exists
+  if (themeToggle) {
+    console.log('Theme toggle found');
 
-  // Add toggle functionality
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-theme');
-    // Save preference to localStorage
-    const isDarkTheme = body.classList.contains('dark-theme');
-    localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-  });
+    // Check if user has previously set a theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.toggle('dark-theme', savedTheme === 'dark');
+    }
+
+    // Add toggle functionality with touch support
+    const toggleTheme = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      body.classList.toggle('dark-theme');
+      const isDarkTheme = body.classList.contains('dark-theme');
+      localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+      console.log('Theme toggled to:', isDarkTheme ? 'dark' : 'light');
+    };
+
+    themeToggle.addEventListener('click', toggleTheme);
+    themeToggle.addEventListener('touchend', toggleTheme);
+  } else {
+    console.error('Theme toggle button not found!');
+  }
 
   // Mobile menu functionality
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('navLinks');
 
-  menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
+  if (menuToggle && navLinks) {
+    console.log('Menu toggle found');
 
-  // Close menu when clicking on a link (for mobile)
-  const navItems = document.querySelectorAll('.nav-links a');
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      menuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
+    const toggleMenu = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      console.log('Menu toggled, active:', navLinks.classList.contains('active'));
+    };
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuToggle.addEventListener('touchend', toggleMenu);
+
+    // Close menu when clicking on a link (for mobile)
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
     });
-  });
+  } else {
+    console.error('Menu toggle or nav links not found!');
+  }
 
   // Image Slider for homepage
   const slides = document.querySelectorAll('.slide');
