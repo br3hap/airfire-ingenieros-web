@@ -1849,13 +1849,15 @@ footer {
     max-width: 320px;
     height: 100vh;
     background-color: var(--bg-light);
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    transition: var(--transition);
+    transition: left 0.3s ease;
     z-index: 1000;
     padding: 3rem 0;
+    overflow-y: auto;
   }
 
   .dark-theme .nav-links {
@@ -1894,28 +1896,29 @@ footer {
 
   /* Hero Slider Mobile Improvements */
   .hero-slider {
-    height: 600px;
+    height: 500px;
   }
 
   .slide {
-    position: absolute;
+    display: flex;
     align-items: center;
-    padding: 2rem 0;
+    justify-content: center;
+    padding: 0;
   }
 
   .slide-content {
-    max-width: 100%;
+    max-width: 90%;
     padding: 2rem 1.5rem;
     text-align: center;
   }
 
   .slide-content h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     line-height: 1.3;
   }
 
   .slide-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 1rem;
   }
 
@@ -1998,7 +2001,7 @@ footer {
   }
 
   .slide-content h1 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .cta-content h2 {
@@ -2020,37 +2023,51 @@ footer {
   }
 
   .whatsapp-button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 56px;
+    height: 56px;
+    font-size: 1.6rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 
+  /* Hero Slider for very small screens */
   .hero-slider {
-    height: auto;
-  }
-
-  .slider-container {
-    height: auto;
-  }
-
-  .slide {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    display: none; /* ocultamos todas por defecto */
-    flex-direction: column;
-  }
-
-  .slide.active {
-    display: flex; /* solo se muestra la activa */
+    height: 450px;
   }
 
   .slide-content {
-    width: 100%;
-    padding: 1.5rem;
-    box-sizing: border-box;
+    max-width: 95%;
+    padding: 1.5rem 1rem;
   }
-  
+
+  .slide-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .slider-controls {
+    bottom: 1.5rem;
+    gap: 1rem;
+  }
+
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 /* Scroll Animations */
