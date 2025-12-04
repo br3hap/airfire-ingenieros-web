@@ -239,7 +239,8 @@ header {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1100;
+  background: transparent;
 }
 
 .top-bar {
@@ -247,6 +248,8 @@ header {
   color: white;
   padding: 0.5rem 0;
   font-size: 0.875rem;
+  position: relative;
+  z-index: 1101;
 }
 
 .top-bar .container {
@@ -280,6 +283,8 @@ header {
   box-shadow: var(--shadow);
   padding: 1rem 0;
   transition: var(--transition);
+  position: relative;
+  z-index: 1100;
 }
 
 .dark-theme .navbar {
@@ -352,6 +357,8 @@ header {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
+  z-index: 1002;
 }
 
 #theme-toggle {
@@ -364,10 +371,19 @@ header {
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 4px;
 }
 
 #theme-toggle:hover {
   color: var(--primary);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark-theme #theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .light-icon {
@@ -385,6 +401,10 @@ header {
 
 .dark-theme .dark-icon {
   display: none;
+}
+
+.dark-theme #theme-toggle {
+  color: var(--text-light);
 }
 
 .menu-toggle {
@@ -1874,12 +1894,30 @@ footer {
     padding: 0.5rem 1rem;
   }
 
+  /* Botones de navegación en móvil */
+  .nav-actions {
+    z-index: 1102;
+    gap: 0.5rem;
+  }
+
+  #theme-toggle {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 12px;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1102;
+  }
+
   .menu-toggle {
     display: flex;
-    z-index: 1001;
-    padding: 8px;
-    min-width: 44px;
-    min-height: 44px;
+    z-index: 1102;
+    padding: 10px;
+    min-width: 48px;
+    min-height: 48px;
+    position: relative;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .menu-toggle.active span:nth-child(1) {
