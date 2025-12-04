@@ -224,15 +224,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact form validation
   const contactForm = document.getElementById('contactForm');
-  
+
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       // Simple form validation
       let isValid = true;
       const requiredFields = contactForm.querySelectorAll('[required]');
-      
+
       requiredFields.forEach(field => {
         if (!field.value.trim()) {
           isValid = false;
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
           field.classList.remove('error');
         }
       });
-      
+
       if (isValid) {
         // Show success message (in a real application, this would submit to a server)
         alert('¡Mensaje enviado con éxito! Nos pondremos en contacto con usted a la brevedad.');
@@ -251,4 +251,76 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Scroll Animations - Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const animateOnScroll = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        // Optional: stop observing after animation
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const scrollObserver = new IntersectionObserver(animateOnScroll, observerOptions);
+
+  // Observe all elements with scroll animation classes
+  const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-fade, .scroll-slide-left, .scroll-slide-right');
+  scrollElements.forEach(el => scrollObserver.observe(el));
+
+  // Add scroll animation classes to sections automatically
+  const sections = document.querySelectorAll('.features, .portfolio, .services, .blog, .cta');
+  sections.forEach(section => {
+    if (!section.classList.contains('scroll-animate')) {
+      section.classList.add('scroll-animate');
+      scrollObserver.observe(section);
+    }
+  });
+
+  // Animate feature cards with stagger effect
+  const featureCards = document.querySelectorAll('.feature-card');
+  featureCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    card.classList.add('scroll-animate');
+    scrollObserver.observe(card);
+  });
+
+  // Animate portfolio items
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  portfolioItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.1}s`;
+    item.classList.add('scroll-animate');
+    scrollObserver.observe(item);
+  });
+
+  // Animate blog cards
+  const blogCards = document.querySelectorAll('.blog-card');
+  blogCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.1}s`;
+    card.classList.add('scroll-animate');
+    scrollObserver.observe(card);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href !== '#!') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
 });
