@@ -10,24 +10,40 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeToggle) {
     console.log('Theme toggle found');
 
-    // Check if user has previously set a theme preference
-    const savedTheme = localStorage.getItem('theme');
+    // Storage may be unavailable in restricted browser contexts.
+    let savedTheme = null;
+    try {
+      savedTheme = localStorage.getItem('theme');
+    } catch {
+      savedTheme = null;
+    }
+
     if (savedTheme) {
       body.classList.toggle('dark-theme', savedTheme === 'dark');
     }
 
-    // Add toggle functionality with touch support
-    const toggleTheme = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
+    const syncThemeToggle = () => {
+      const isDarkTheme = body.classList.contains('dark-theme');
+      themeToggle.setAttribute('aria-pressed', String(isDarkTheme));
+      themeToggle.setAttribute('aria-label', isDarkTheme ? 'Activar tema claro' : 'Activar tema oscuro');
+    };
+
+    syncThemeToggle();
+
+    const toggleTheme = () => {
       body.classList.toggle('dark-theme');
       const isDarkTheme = body.classList.contains('dark-theme');
-      localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
-      console.log('Theme toggled to:', isDarkTheme ? 'dark' : 'light');
+
+      try {
+        localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light');
+      } catch {
+        // The selected theme still applies for the current page view.
+      }
+
+      syncThemeToggle();
     };
 
     themeToggle.addEventListener('click', toggleTheme);
-    themeToggle.addEventListener('touchend', toggleTheme);
   } else {
     console.error('Theme toggle button not found!');
   }
@@ -318,7 +334,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Animate portfolio items
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
   portfolioItems.forEach((item, index) => {
     item.style.transitionDelay = `${index * 0.1}s`;
     item.classList.add('scroll-animate');

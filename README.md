@@ -1,25 +1,19 @@
 
-# Página Web Minimalista
+# AirFire Ingenieros
 
-Una página web profesional con diseño minimalista y elegante, creado con HTML, CSS, JavaScript, Vite y Tailwind CSS.
+Sitio web estático de AirFire Ingenieros, creado con HTML, CSS y JavaScript.
 
-## Características
+## Páginas
 
-- Diseño limpio, moderno y responsivo
-- Animación de escritura tipo máquina en el nombre principal
-- Modo claro y oscuro con posibilidad de alternar entre ellos
-- Secciones principales: inicio, proyectos destacados y contacto
-- Navegación suave entre secciones
-- Optimizado para todos los dispositivos
+- `index.html`: inicio
+- `nosotros.html`: información de la empresa
+- `servicios.html`: servicios
+- `proyectos.html`: proyectos
+- `blog.html`: artículos
+- `contacto.html`: contacto
 
-## Tecnologías utilizadas
+## Uso
 
-- HTML5
-- JavaScript (ES6+)
-- Tailwind CSS
-- Vite (para desarrollo rápido y optimizado)
+Abre `index.html` directamente en el navegador. No requiere instalar dependencias ni iniciar un servidor.
 
-
-## Contacto
-
-Creado por Breithner Aquituari - breithnerap@gmail.com
+Las imágenes y el icono del sitio se encuentran en `src/doc/img/`; los estilos y la interacción compartida están en `style.css` y `script.js`.
